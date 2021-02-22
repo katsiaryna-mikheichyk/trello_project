@@ -1,4 +1,4 @@
-Description: Composite steps
+Description: Composite steps and API creation board
 
 Scenario: Sign in
 
@@ -14,7 +14,12 @@ When I find <= '1' elements by By.xpath(//*[@id="content"]/div/div[2]/div/div/di
 Then the page with the URL 'https://trello.com/taco37601441/account' is loaded
 Then the text 'Taco' exists
 
-
 Examples:
 |Useremail           |Password  |
 |katsiarynm@gmail.com|Passwd!!!1|
+
+
+Scenario: API creation of board
+When I issue a HTTP POST request for a resource with the URL 'https://api.trello.com/1/boards/?key=${key}&token=${token}&name=${boardName}'
+Then `${responseCode}` is equal to `200`
+

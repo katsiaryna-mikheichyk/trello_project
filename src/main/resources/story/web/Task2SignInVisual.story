@@ -1,4 +1,4 @@
-Description: Creare board
+Description: Sign in with user and verify pages
 
 GivenStories: story/web/1SignUpuserPrecondition.story
 
@@ -35,8 +35,8 @@ Scenario: Verify Page 2
 Given I am on a page with the URL 'https://trello.com/kate64853393'
 When I click on element located `By.xpath(//*[@id="header"]/div[1]/a/span)`
 When I click on element located `By.xpath(//*[@id="content"]/div/div[2]/div/div/div/div/div[1]/nav/div[1]/ul/li[2]/a)`
-When I wait until element located `By.xpath(//*[@id="content"]/div/div[2]/div/div/div/div/div[2]/div[3]/div/div[1])` appears
-When I change context to element located `By.xpath(//*[@id="content"]/div/div[2]/div/div/div/div/div[2]/div[3]/div/div[1])`
+When I wait until element located `By.xpath(//*[@id="content"]/div/div[2]/div/div/div/div/div[2]/div[3]/div[1])` appears
+When I change context to element located `By.xpath(//*[@id="content"]/div/div[2]/div/div/div/div/div[2]/div[3]/div[1])`
 When I COMPARE_AGAINST baseline with `Home-page2`
 
 Scenario: Verify Page 3
